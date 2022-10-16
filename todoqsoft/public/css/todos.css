@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: goldenrod;
+}
+
+.container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    color:blue;
+    padding: 5rem;
+    font-size: 3rem;
+}
+
+input{
+    min-width: 500px;
+    height: 2.3rem;
+    border-radius: 10px 5px 10px 5px;
+    font-size: 1rem;
+    border: solid 2px blue;
+    color: blue;
+    outline: none;
+}
+
+::placeholder{
+    color: blue;
+}
+
+button{
+    width: 150px;
+    height: 2.6rem;
+    background: orangered;
+    color: blue;
+    border-radius: 10px 5px 10px 5px;
+    display: inline-block;
+    cursor: pointer;
+    border-color: blue;
+}
+
+
+.todo-container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.todo-value{
+    min-width: 550px;
+    height: 1.5rem;
+    font-size: 1rem;
+    color: blue;
+    outline: none;
+    background-color: rgb(221, 202, 189);
+}
+
+.todo-delete{
+    margin: 3px;
+}
+
+a{
+    width: 110px;
+    height: 1.7rem;
+    background: orangered;
+    color: blue;
+    display: inline-block;
+    cursor: pointer;
+    border-color: blue;
+}
+

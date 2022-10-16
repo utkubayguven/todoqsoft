@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/todos.css">
+    <title>Todo App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <form action="/" method="POST">
+            <input type="text" placeholder="Add todos" name="todoV" required>
+            <button type="submit">Add Todo</button>
+        </form>
+        <% if(data){ %>
+            <% data.forEach(todoV =>{%>
+                <div class="todo-container">
+                    <div class="todo-value"><%= todoV.todo %></div>
+                    <div><a class="todo-delete <%= todoV.id %>" >Delete </a></div>
+                </div>
+        <% }) %>
+    <% }  %>
+    </div>
+
+    <script>
+        const deleteButton = document.querySelectorAll(".todo-delete")
+
+        deleteButton.forEach((button)=>{
+            button.addEventListener("click",()=>{
+                const id = `/${button.classList[1]}`
+                fetch(id,{
+                    method:"DELETE"
+                })
+                window.location.href ="/todos"
+            })
+        })
+    </script>
+</body>
+</html>
